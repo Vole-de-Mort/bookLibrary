@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        Books Libary
+    </div>
+    <hr>
+    <div class="main" id="main">
+      <button id="btn">New Book</button>
+      <div id="books"class='books'>
+    
+      </div>
+      <dialog>
+        <form id="form">
+          <div class="form">
+            <div><label for="getbooktitle">Title</label></div>
+            <div><input type="text" name="getbooktitile" id="getbooktitle" placeholder="book title"></div>
+            <div><label for="getbookauthor">Author</label></div>
+            <div><input type="text" name="getbookauthor" id="getbookauthor" placeholder="book author"></div>
+            <div><label for="getbookpages">Pages</label></div>
+            <div><input type="text" name="getbookpages" id="getbookpages" placeholder="book pages"></div>
+            <div><label for="check"><span style="color: red;">Have You</span> read it <span style="color: red;">?</span></label></div>
+            <div><input type="checkbox" id="check"></div>
+            <button id="close" class="insideBtn" type="button" >Close</button>
+            <button class="insideBtn" type="button" id="add">Add</button>
+          </div>
+        </form>
+      </dialog>
+    </div>
+    </div>  
+  <script src="./script.js"></script>
+</body>
+</html>

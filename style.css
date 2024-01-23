@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #5CDB95;
+
+
+}
+.container{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #05386B;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 30px;
+
+}
+#btn{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    background-color: #05386B;
+    color: whitesmoke;
+}
+dialog{
+    position: absolute;
+    top: 35%;
+    left: 32%;
+    height: 33vh;
+    width: 35vw;
+    background-color: #2b5a40;
+    border-radius: 20px;
+    border: solid black 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+dialog::backdrop{
+    background: rgba(40, 44, 42, 0.613);
+    filter: blur(1rem);
+}
+.form{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(4,1fr) auto;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+
+}
+.insideBtn{
+    cursor: pointer;
+    background-color: #05386B;
+    color: whitesmoke;   
+    border: none;
+    border-radius: 15px;
+    height: 3rem;
+    font-size: 1.5rem;
+
+}
+input{
+    height: 1.6rem;
+    width: 10rem;
+}
+#books{
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: repeat(5 , auto);
+    font-size: 2.1rem;
+    gap: 1.3rem;
+}
+.remove_border{
+    border: none !important;
+}
+.item{
+    font-size: 1.3rem;
+    text-align: center;
+}
+.btn{
+    border: none;
+    border-radius: 5%;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#books > .removeBtn {
+    background-color: red;
+    color: white;
+}
