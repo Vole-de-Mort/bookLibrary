@@ -38,12 +38,18 @@ function display(){
         btn2.textContent = 'X';
         myLibary[i].index = s;
         btn2.dataset.index = myLibary[i].index;
+        btn1.dataset.index = myLibary[i].index;
         s++;
         myLibary[i].index++;
         books.appendChild(part1);
         books.appendChild(part2);
         books.appendChild(part3);
         books.appendChild(btn1);
+        if(btn1.textContent == "yes"){
+            btn1.style.backgroundColor = 'green';
+        }else{
+            btn1.style.backgroundColor = 'red';
+        }
         books.appendChild(btn2);
     }
 };
@@ -94,15 +100,21 @@ addBtn.addEventListener('click', ()=>{
     dialog.close();
     
 });
-
 books.addEventListener('click', (event) => {
     if (event.target.classList.contains('removeBtn')) {
         const indexToRemove = event.target.dataset.index;
         myLibary.splice(indexToRemove, 1); // Remove the book from the array
         clear();
         display(); // Redraw the updated book list
-    }
+    }else if (event.target.classList.contains('hell')){
+        if(event.target.textContent == "yes"){
+            event.target.textContent = "Noo";
+            event.target.style.backgroundColor = 'red';
+            myLibary[event.target.dataset.index].read = "Noo";
+        }else{
+            event.target.textContent = "yes";
+            event.target.style.backgroundColor = 'green';
+            myLibary[event.target.dataset.index].read = "yes";
+        }
+    };
 });
-
-
-
